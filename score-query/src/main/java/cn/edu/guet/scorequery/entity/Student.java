@@ -25,4 +25,16 @@ public class Student {
     public String getClassName() {
         return className;
     }
+
+    public void setStudentNo(String studentNo) {
+        this.studentNo = studentNo;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
 }
