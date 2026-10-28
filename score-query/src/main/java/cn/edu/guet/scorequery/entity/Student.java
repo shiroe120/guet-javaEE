@@ -1,0 +1,28 @@
+package cn.edu.guet.scorequery.entity;
+
+public class Student {
+    private String studentNo;
+    private String name;
+    private String className;
+
+    public Student() {
+    }
+
+    public Student(String studentNo, String name, String className) {
+        this.studentNo = studentNo;
+        this.name = name;
+        this.className = className;
+    }
+
+    public String getStudentNo() {
+        return studentNo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+}
