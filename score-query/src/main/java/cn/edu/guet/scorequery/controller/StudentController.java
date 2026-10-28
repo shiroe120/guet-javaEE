@@ -1,8 +1,10 @@
 package cn.edu.guet.scorequery.controller;
 
+import cn.edu.guet.scorequery.dto.ScoreView;
 import cn.edu.guet.scorequery.entity.Student;
 import cn.edu.guet.scorequery.service.ScoreService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,5 +22,10 @@ public class StudentController {
     @GetMapping
     public List<Student> getStudents() {
         return scoreService.listStudents();
+    }
+
+    @GetMapping("/{studentNo}/scores")
+    public List<ScoreView> getScoresByStudentNo(@PathVariable String studentNo) {
+        return scoreService.listScoresByStudentNo(studentNo);
     }
 }
